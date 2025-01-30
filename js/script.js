@@ -41,12 +41,12 @@ let selectedAppId = null;
 
 const renderHomePage = () => {
   rootElement.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <header class="text-center mb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <header class="mb-12">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">GMR_Archvie(WOOJIN) 개발자 사이트</h1>
         <p class="text-xl text-gray-600">출시/업데이트 및 개인정보처리방침, 후원</p>
       </header>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
         ${apps.map(app => `
           <button onclick="handleAppClick('${app.id}')" class="text-left block w-full">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-200 hover:scale-105">
@@ -78,17 +78,19 @@ const renderAppPage = (appId) => {
 
   rootElement.innerHTML = `
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <button onclick="handleBack()" class="text-blue-600 hover:text-blue-800 mb-8 inline-block">← 메인으로 돌아가기</button>
+      <div class="flex items-center justify-between mb-8">
+        <button onclick="handleBack()" class="text-blue-600 hover:text-blue-800">← 메인으로 돌아가기</button>
+      </div>
       <div class="bg-white rounded-lg shadow-lg p-8">
-        <div class="flex items-center mb-8">
+        <div class="flex items-center justify-center mb-8">
           <img src="${app.icon}" alt="${app.name} 아이콘" class="w-24 h-24 rounded-xl"/>
-          <div class="ml-6">
+        </div>
+        <div class="space-y-8">
+          <section class="app-details">
             <h1 class="text-3xl font-bold text-gray-900 mb-2">${app.name}</h1>
             <p class="text-gray-600">${app.description}</p>
             <a href="${app.downloadLink}" class="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">다운로드</a>
-          </div>
-        </div>
-        <div class="space-y-8">
+          </section>
           <section>
             <h2 class="text-2xl font-bold text-gray-900 mb-4">업데이트 내역</h2>
             ${app.updates.length > 0 ? `
@@ -130,4 +132,3 @@ const handleBack = () => {
 
 // 최초 페이지 렌더링
 renderHomePage();
-
