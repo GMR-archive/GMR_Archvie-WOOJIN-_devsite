@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>GMR_Archive(WOOJIN) 개발자 웹사이트</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMR_Archive(WOOJIN)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body class="bg-gray-50">
+<body>
+    <div id="app" class="min-h-screen">
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <div class="container">
+                <header class="text-center">
+                    <h1 class="animate__animated animate__fadeIn">GMR_Archive(WOOJIN)</h1>
+                    <p class="subtitle animate__animated animate__fadeIn animate__delay-1s">출시/업데이트 내역 및 개인정보처리방침</p>
+                </header>
+                
+                <div class="app-grid" id="appGrid">
+                    <!-- Apps will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
 
-  <!-- 메인 콘텐츠 -->
-  <div id="root"></div>
+        <!-- App Detail Page -->
+        <div id="appPage" class="page">
+            <div class="container">
+                <button id="backButton" class="back-button">
+                    메인으로 돌아가기
+                </button>
+                
+                <div class="app-detail">
+                    <div class="app-header">
+                        <img id="appIcon" src="" alt="" class="app-icon">
+                        <div class="app-info">
+                            <h1 id="appName"></h1>
+                            <p id="appDescription"></p>
+                            <a id="downloadButton" href="#" class="download-button">
+                                다운로드
+                            </a>
+                        </div>
+                    </div>
 
-  <script src="js/script.js"></script>
+                    <div class="content-sections">
+                        <section class="updates-section">
+                            <h2>업데이트 내역</h2>
+                            <div id="updatesContent" class="updates-content">
+                                <!-- Updates will be dynamically inserted here -->
+                            </div>
+                        </section>
+
+                        <section class="privacy-section">
+                            <h2>개인정보처리방침</h2>
+                            <div id="privacyContent" class="privacy-content">
+                                <!-- Privacy policy will be dynamically inserted here -->
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
