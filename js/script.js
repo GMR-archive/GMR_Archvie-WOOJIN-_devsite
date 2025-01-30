@@ -3,7 +3,7 @@ const apps = [
     {
         id: 'appNo.1',
         name: '고쳐드림',
-        icon: '.assets/001.png',
+        icon: './assets/001.png',
         description: 'AI 자소서 첨삭 앱',
         category: '생산성/교육',
         downloadLink: '#',
@@ -27,7 +27,7 @@ const apps = [
     {
         id: 'coming-soon',
         name: '준비중',
-        icon: '.assets/002.png',
+        icon: './assets/002.png',
         description: '새로운 앱이 곧 출시됩니다',
         category: '개발중',
         downloadLink: '#',
