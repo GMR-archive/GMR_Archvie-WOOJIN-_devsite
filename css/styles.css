@@ -1,7 +1,8 @@
-
 body {
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.6;
+  height: 100%; 
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -79,6 +80,7 @@ button:hover, a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%; 
 }
 
 .text-left {
@@ -184,4 +186,18 @@ li {
   .grid-cols-1 {
     grid-template-columns: 1fr;
   }
+}
+
+.icon-only {
+  opacity: 1; 
+  transition: opacity 0.3s ease;
+}
+
+.app-details {
+  opacity: 0; 
+  pointer-events: none; 
+}
+
+.icon-only:hover + .app-details {
+  opacity: 1; 
 }
