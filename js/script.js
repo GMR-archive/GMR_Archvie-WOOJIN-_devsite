@@ -84,7 +84,7 @@ const apps = [
     },
     {
         id: 'coming-soon2',
-        name: '준비중',
+        name: '준비중2',
         icon: './assets/002.png',
         description: '새로운 앱이 곧 출시됩니다',
         category: '게임',
