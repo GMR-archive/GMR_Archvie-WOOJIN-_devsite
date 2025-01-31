@@ -77,7 +77,17 @@ const apps = [
         name: '준비중',
         icon: './assets/002.png',
         description: '새로운 앱이 곧 출시됩니다',
-        category: '개발중',
+        category: '생산성/교육',
+        downloadLink: '#',
+        privacyPolicy: '준비중입니다.',
+        updates: []
+    },
+    {
+        id: 'coming-soon',
+        name: '준비중',
+        icon: './assets/002.png',
+        description: '새로운 앱이 곧 출시됩니다',
+        category: '게임',
         downloadLink: '#',
         privacyPolicy: '준비중입니다.',
         updates: []
