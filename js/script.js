@@ -6,7 +6,7 @@ const apps = [
         icon: './assets/001.png',
         description: 'AI 자소서 첨삭 앱',
         category: '생산성/교육',
-        downloadLink: '#',
+        downloadLink: 'https://play.google.com/store/apps/details?id=com.aicoverlettermaster.app',
         privacyPolicy: `최종 업데이트: 2025년 2월 2일
 
 본 개인정보 처리방침은 이용자가 서비스를 사용할 때의 정보 처리 방식과 이용자의 개인정보 보호 권리에 대해 설명합니다.
@@ -61,17 +61,17 @@ gamemaraarchive@gmail.com
 `,
         updates: [
             {
-                version: '1.x.x',
+                version: '1.1.1',
                 date: '20xx.xx.xx',
                 details: [
-                    '...',
+                    '업데이트 예정,',
                     '...'
                 ]
             },
             {
-                version: '1.0.0',
-                date: '20xx.xx.xx',
-                details: ['출시 대기중']
+                version: '1.1.0',
+                date: '2025.02.24',
+                details: ['정식출시']
             }
         ]
     },
